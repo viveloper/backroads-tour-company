@@ -161,7 +161,7 @@ a {
   transition: var(--mainTransition);
 }
 .show-links {
-  height: 271.43px;
+  height: 270px;
 }
 @media screen and (min-width: 992px) {
   .nav-toggle {
