@@ -123,7 +123,7 @@ a {
 /************************* end of navbar  **************************/
 /************************* hero  **************************/
 .hero {
-  height: 100vh;
+  height: calc(100vh - 62px);
   background: var(--primaryColor);
   display: flex;
   justify-content: center;
