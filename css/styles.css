@@ -119,8 +119,112 @@ a {
 }
 /************************* end of global styles  **************************/
 
-/************************* navbar  **************************/
-/************************* end of navbar  **************************/
+/************************* navbar **************************/
+.nav-icons {
+  display: none;
+}
+.nav-header {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-toggle {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  color: var(--primaryColor);
+  cursor: pointer;
+  transition: var(--mainTransition);
+}
+.nav-toggle:hover {
+  transform: scale(1.2);
+}
+.nav-link {
+  display: block;
+  padding: 1rem 2rem;
+  color: var(--mainBlack);
+  text-transform: capitalize;
+  font-weight: bold;
+  letter-spacing: var(--mainSpacing);
+  transition: var(--mainTransition);
+}
+.nav-link:hover {
+  color: var(--primaryColor);
+  background: var(--darkGrey);
+  padding-left: 2.5rem;
+}
+.nav-links {
+  height: 0;
+  overflow: hidden;
+  transition: var(--mainTransition);
+}
+.show-links {
+  height: 271.43px;
+}
+@media screen and (min-width: 992px) {
+  .nav-toggle {
+    display: none;
+  }
+  .nav-links {
+    display: flex;
+    height: auto;
+  }
+  .nav-icons {
+    display: flex;
+  }
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .nav-header {
+    padding: 0;
+  }
+  .nav-link {
+    padding: 0;
+  }
+  .nav-link:hover {
+    padding: 0;
+    background: transparent;
+  }
+  .navbar {
+    padding: 1rem 2rem;
+  }
+  .nav-center {
+    width: 100%;
+  }
+  .nav-link {
+    margin-right: 0.7rem;
+  }
+  .nav-icon {
+    margin-right: 0.7rem;
+    color: var(--primaryColor);
+    font-size: 1.2rem;
+    transition: var(--mainTransition);
+  }
+  .nav-icon:hover {
+    color: var(--darkGrey);
+    transform: translateY(-10%);
+  }
+}
+/* fixed navbar */
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--mainGrey);
+  transition: var(--mainTransition);
+  box-shadow: var(--lightShadow);
+  z-index: 1;
+}
+/************************* end of navbar **************************/
 /************************* hero  **************************/
 .hero {
   height: calc(100vh - 62px);
@@ -440,90 +544,3 @@ a {
   letter-spacing: var(--mainSpacing);
 }
 /************************* end of footer **************************/
-/************************* navbar **************************/
-.nav-icons {
-  display: none;
-}
-.nav-header {
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.nav-toggle {
-  background: transparent;
-  border: none;
-  outline: none;
-  font-size: 1.5rem;
-  color: var(--primaryColor);
-  cursor: pointer;
-  transition: var(--mainTransition);
-}
-.nav-toggle:hover {
-  transform: scale(1.2);
-}
-.nav-link {
-  display: block;
-  padding: 1rem 2rem;
-  color: var(--mainBlack);
-  text-transform: capitalize;
-  font-weight: bold;
-  letter-spacing: var(--mainSpacing);
-  transition: var(--mainTransition);
-}
-.nav-link:hover {
-  color: var(--primaryColor);
-  background: var(--darkGrey);
-  padding-left: 2.5rem;
-}
-@media screen and (min-width: 992px) {
-  .nav-toggle {
-    display: none;
-  }
-  .nav-links {
-    display: flex;
-    height: auto;
-  }
-  .nav-icons {
-    display: flex;
-  }
-  .nav-center {
-    max-width: 1170px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
-  }
-  .nav-header {
-    padding: 0;
-  }
-  .nav-link {
-    padding: 0;
-  }
-  .nav-link:hover {
-    padding: 0;
-    background: transparent;
-  }
-  .navbar {
-    padding: 1rem 2rem;
-  }
-  .nav-center {
-    width: 100%;
-  }
-  .nav-link {
-    margin-right: 0.7rem;
-  }
-  .nav-icon {
-    margin-right: 0.7rem;
-    color: var(--primaryColor);
-    font-size: 1.2rem;
-    transition: var(--mainTransition);
-  }
-  .nav-icon:hover {
-    color: var(--darkGrey);
-    transform: translateY(-10%);
-  }
-}
-/************************* end of navbar **************************/
